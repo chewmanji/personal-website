@@ -1,0 +1,75 @@
+body {
+  background-color: #430e82;
+  color: #fff;
+  padding: 10em;
+  font-size: large;
+  text-align: center;
+}
+
+p {
+  font-weight: 700;
+}
+
+.shimmer-right {
+  background-image: linear-gradient(to right, #fff 48%, #8f18ff 50%, #fff 52%);
+  background-clip: text;
+  background-size: 200%;
+  background-position-x: 110%;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-animation 1s linear;
+}
+
+.shimmer-left {
+  background-image: linear-gradient(to right, #fff 48%, #8f18ff 50%, #fff 52%);
+  background-clip: text;
+  background-size: 200%;
+  background-position-x: -210%;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-animation 2s linear;
+}
+
+@keyframes shimmer-animation {
+  to {
+    background-position-x: 0%;
+  }
+}
+
+.roboto {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 16em;
+  min-height: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  gap: 2em;
+  bottom: 20vh;
+}
+
+#e {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#e.show-slow {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s ease;
+}
